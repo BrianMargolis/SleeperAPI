@@ -10,16 +10,17 @@ export interface Response {}
 
 export abstract class SleeperOperation<I, O> extends Operation<I, O> {
     constructor(protected readonly request: Request) {
-        super()
+        super();
     }
 
-    public async execute(): Promise<O> {
+    public abstract execute(): Promise<O>;
+
+    public async _execute(): Promise<any> {
         const path = SLEEPER_BASE_DOMAIN + this.request.path;
-        console.log(`GET ${path}`);
         return fetch(path).then(response => response.json());
     }
 
     public key(): string {
-        return JSON.stringify(this.request)
+        return JSON.stringify(this.request);
     }
 }

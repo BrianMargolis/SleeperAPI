@@ -13,7 +13,7 @@ export class GetSeason extends SleeperOperation<GetSeasonRequest, Season> {
     }
 
     public async execute(): Promise<Season> {
-        return super.execute().then(json => ({
+        return super._execute().then(json => ({
             totalRosters: json['total_rosters'],
             year: json['season'],
             seasonType: json['season_type'],

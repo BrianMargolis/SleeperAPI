@@ -1,0 +1,42 @@
+{
+  "name": "sleeperapi",
+  "version": "1.0.0",
+  "description": "A thick wrapper around the public Sleeper API.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist/",
+    "build": "tsc",
+    "test": "ts-node test/integration-test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianMargolis/SleeperAPI.git"
+  },
+  "keywords": [
+    "sleeper",
+    "football",
+    "fantasy football",
+    "sports",
+    "data",
+    "nfl"
+  ],
+  "author": "Brian Margolis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianMargolis/SleeperAPI/issues"
+  },
+  "homepage": "https://github.com/BrianMargolis/SleeperAPI#readme",
+  "devDependencies": {
+    "jest": "^27.1.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "@types/node-fetch": "^2.5.12",
+    "node-fetch": "^2.6.1"
+  }
+}
